@@ -4,22 +4,7 @@ $(document).ready(function () {
     loadDataTable();
 });
 
-function loadDataTable() {
-    dataTable = $('#myData').DataTable({
-        "ajax": { url: '/admin/product/getall' },
-        "columns": [
-            { data: 'title', "width": "25%" },
-            { data: 'isbn', "width": "15%" },
-            { data: 'listPrice', "width": "10%" },
-            { data: 'author', "width": "15%" },
-            { data: 'category.name', "width": "10%" },
-            {
-                "defaultContent": ""
-            },
 
-        ]
-    });
-}
 function loadDataTable() {
     dataTable = $('#myData').DataTable({
         "ajax": {
@@ -27,7 +12,7 @@ function loadDataTable() {
         },
         "columns": [
             { "data": "title", "width": "15%" },
-            { "data": "description", "width": "25%" },
+            { "data": "description", "width": "30%" },
             { "data": "isbn", "width": "15%" },
             { "data": "author", "width": "10%" },
             { "data": "price", "width": "5%" },
@@ -41,7 +26,7 @@ function loadDataTable() {
                      <a onClick=Delete('/admin/product/delete/${data}') class="btn btn-danger mx-2"> <i class="bi bi-trash-fill"></i> Delete</a>
                     </div>`
                 },
-                "width": "25%"
+                "width": "20%"
             },
 
 
